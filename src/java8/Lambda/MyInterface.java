@@ -1,6 +1,6 @@
 package java8.Lambda;
 
 public interface MyInterface {
-    public abstract void speak ();
+    public abstract void speak();
 
 }
