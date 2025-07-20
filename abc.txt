@@ -1,0 +1,27 @@
+package hackerrank;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class dateAndTime {
+    public static void findDay(int date, int month, int year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month - 1, date); // Adjust month to zero-based indexing
+
+        int getDay = calendar.get(Calendar.DAY_OF_WEEK);
+
+        String[] dayArray = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        String exactDay = dayArray[getDay - 1]; // Adjust to zero-based indexing
+
+        System.out.println(exactDay.toUpperCase());
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int date = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
+        findDay(date, month, year);
+        sc.close();
+    }
+}
